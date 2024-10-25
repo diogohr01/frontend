@@ -30,7 +30,6 @@ export default function Home() {
         return;
         
       }
-      console.log(response.data)
       const expressTime =  60 * 60 * 24 * 30 * 1000;
       cookies().set("session", response.data.token,{
         maxAge: expressTime,

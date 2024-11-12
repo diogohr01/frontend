@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 import {cookies} from 'next/headers'
 import logoImgCafe from '/public/logoCafe.svg'
 import { toastError, toastSuccess } from "./components/toast";
-
+import favicon from '/public/favicon.ico'
 
 export default function Home() {
   async function handleLogin(formData: FormData){
@@ -50,6 +50,7 @@ export default function Home() {
   }
   return (
    <>
+   
    <div className={styles.containerCenter}>
     <Image
     src={logoImgCafe}

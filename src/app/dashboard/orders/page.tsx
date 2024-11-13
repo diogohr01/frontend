@@ -26,7 +26,6 @@ export default async function OrdersTable(){
 
       const orders = await getOrders();
 
-      console.log(orders)
       return(
             <div>
                  <Orders orders={orders}/>

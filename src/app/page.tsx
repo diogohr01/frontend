@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 import {cookies} from 'next/headers'
 import logoImgCafe from '/public/logoCafe.svg'
 import { toastError, toastSuccess } from "./components/toast";
-
+import favicon from '/public/favicon.ico'
 
 export default function Home() {
   async function handleLogin(formData: FormData){
@@ -30,7 +30,6 @@ export default function Home() {
         return;
         
       }
-      console.log(response.data)
       const expressTime =  60 * 60 * 24 * 30 * 1000;
       cookies().set("session", response.data.token,{
         maxAge: expressTime,
@@ -51,6 +50,7 @@ export default function Home() {
   }
   return (
    <>
+   
    <div className={styles.containerCenter}>
     <Image
     src={logoImgCafe}
